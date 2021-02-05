@@ -34,8 +34,6 @@ app.use(middleware.errorHandler);
 
 app.get('/health', (req, res) => {
   res.send('ok');
-})
-
-console.log(" ");
+});
 
 module.exports = app;
