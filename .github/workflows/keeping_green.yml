@@ -24,6 +24,7 @@ jobs:
         run: npm run test
         env:
           MONGODB_URI: ${{ secrets.MONGODB_URI }}
+          TEST_MONGODB_URI: ${{ secrets.TEST_MONGODB_URI }}
   deploy:
     if: ${{ github.event_name == 'push' && !contains(join(toJson(github.event.commits.*.message)), '#skip' ) }}
     needs: tests
