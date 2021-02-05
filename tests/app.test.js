@@ -1,8 +1,3 @@
-require('dotenv').config();
-let { MONGODB_URI, HEROKU_APP_NAME } = process.env;
-console.log("---mongo uri-----", MONGODB_URI);
-console.log("---app name-----", HEROKU_APP_NAME);
-
 const _ = require('lodash');
 const mongoose = require('mongoose');
 const supertest = require('supertest');
