@@ -32,4 +32,8 @@ app.use('/api/blogs', blogsRouter);
 app.use(middleware.unknownEndpoint);
 app.use(middleware.errorHandler);
 
+app.get('/health', (req, res) => {
+  res.send('ok')
+})
+
 module.exports = app;
