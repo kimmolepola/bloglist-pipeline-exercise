@@ -1,3 +1,7 @@
+require('dotenv').config();
+let { MONGODB_URI } = process.env;
+console.log("---mongo uri-----", MONGODB_URI);
+
 const _ = require('lodash');
 const mongoose = require('mongoose');
 const supertest = require('supertest');
